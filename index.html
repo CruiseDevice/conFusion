@@ -45,11 +45,11 @@
                 <ul class="nav navbar-nav">
                     <li class="active"><a href="index.html"><span class="glyphicon glyphicon-home"
                          aria-hidden="true"></span> Home</a></li>
-                    <li><a href="aboutus.html"><span class = "glyphicon glyphicon-info-sign"></span>About</a></li>
+                    <li><a href="aboutus.html"><span class = "glyphicon glyphicon-info-sign"></span> About</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                          role="button" aria-haspopup="true" aria-expanded="false"><span class = "glyphicon glyphicon-list-alt "></span>
-                         Menu <span class="caret"></span></a>
+                          Menu <span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="#">Appetizers</a></li>
                             <li><a href="#">Main Courses</a></li>
@@ -61,10 +61,36 @@
                             <li><a href="#">Weekend Brunch</a></li>
                         </ul>
                     </li>
-                    <li><a href="contactus.html"><span class = "fa-envelope-o"></span>Contact</a></li>
+                    <li><a href="contactus.html"><span class = "fa-envelope-o"></span>  Contact</a></li>
                 </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a id="loginBtn" role="button">
+                    <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                    </li>
+                </ul>
+                <div id="loginModal" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Login </h4>
+                        </div>
+                        <div class="modal-body">
+                            <form class="form-inline" role="form">
+                                <div class="form-group">
+                                    <input type="email" class="form-control input-sm" id="emailid" name="emailid" placeholder="Email">
+                                    <input type="password" class="form-control input-sm" id="pwd" placeholder="Password">
+                                    <label class="checkbox-inline"><input type="checkbox" name="approve" value="">Remeber me</label>    
+                                </div>
+                                <button type="button" class="btn btn-info btn-sm">Sign in</button> 
+                                <button type="button" class="btn btn-default btn-sm"
+                                   data-dismiss="modal">Cancel</button>               
+                            </form>
+                        </div>
+                    </div>
+                    </div>
             </div>
-        </div>
     </nav>     
     
     <header class="jumbotron">
@@ -193,6 +219,20 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
+    
+    <!-- Modal btn and reserve btn -->
+    <script>
+      $(document).ready(displayModals());
+      function displayModals(){
+        $("#loginBtn").click(function(){
+          $("#loginModal").modal();
+        });
+        $("#modalBtn").click(function(){
+          $("#formModal").modal();
+        });
+      };
+    </script>
+
 </body>
 
 </html>
